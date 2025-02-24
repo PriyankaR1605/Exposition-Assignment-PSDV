@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Quarto Template"
+  title: "Exposition Assignment PSDV"
   navbar:
     right:
       - href: index.qmd
@@ -16,6 +16,7 @@ format:
   html:
     theme:
       light: [litera, styles.scss]
+      dark: [darkly, styles-dark.scss]
     highlight-style: a11y-dark
     mainfont: "Roboto"
     code-copy: true
