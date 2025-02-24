@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>psdv-assignment-blog – Quarto Template</title>
+<title>psdv-assignment-blog – Exposition Assignment PSDV</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -35,10 +69,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8e00f2f28a1266a720913de837032221.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8e00f2f28a1266a720913de837032221.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8e00f2f28a1266a720913de837032221.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7cfa380d139a4d61a924487b0af32b39.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7cfa380d139a4d61a924487b0af32b39.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f3334d8762c99882e0abf45e0a8cc19a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Quarto Template</span>
+    <span class="navbar-title">Exposition Assignment PSDV</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -98,6 +134,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -201,37 +238,90 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Add Graphviz to the system PATH variable. o Open System Properties . o Go to the Advanced tab then Click on the Environment Variables. o Under System Variables, find Path, click Edit. o Add the Graphviz bin directory path, which is usually: C: Files Then Click OK and restart your terminal.</p></li>
 <li><p>Check that the Graphviz is installed by running the following code:</p></li>
 </ol>
-<p>dot -V</p>
+<div id="26a65de7" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install Graphviz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Requirement already satisfied: Graphviz in c:\users\priya\appdata\local\programs\python\python310\lib\site-packages (0.20.3)
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
+<div id="c942b7f7" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dot <span class="op">-</span>V</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>If Graphviz is installed correctly, you must see the output as follows:</p>
-<p>dot - Graphviz version 2.49.3 (2025-02-22)</p>
+<div id="e3f7ffab" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dot <span class="op">-</span> Graphviz version <span class="fl">2.49.3</span> (<span class="dv">2025</span><span class="op">-</span><span class="dv">0</span><span class="er">2</span><span class="op">-</span><span class="dv">22</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
 <li><strong>For macOS Users:</strong></li>
 </ul>
 <p>To install Graphviz by using homebrew run the code:</p>
-<p>brew install Graphviz</p>
+<div id="25a28428" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>brew install Graphviz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>To check that the Graphviz is installed, run the code:</p>
-<p>dot –V</p>
+<div id="dbc90349-a4dd-4a5b-bee7-234996941115" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dot –V</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>If the output is as follows, then you have istalled Graphviz successfully!</p>
-<p>dot - Graphviz version 2.49.3</p>
+<div id="646d9786-345f-4a43-bec0-3d5999da06c4" class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dot <span class="op">-</span> Graphviz version <span class="fl">2.49.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
 <li><strong>For Linux Users:</strong></li>
 </ul>
 <p>To install the Graphviz using package manager run the following code:</p>
-<p>Code: sudo apt install Graphviz # Debian/Ubuntu sudo yum install Graphviz # CentOS/RHEL sudo pacman -S Graphviz # Arch Linux</p>
+<div id="75bc0af8-3876-4777-b070-e780d53cf40f" class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Code: sudo apt install Graphviz <span class="co"># Debian/Ubuntu</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sudo yum install Graphviz <span class="co"># CentOS/RHEL</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>sudo pacman <span class="op">-</span>S Graphviz <span class="co"># Arch Linux</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>To check if Graphviz is installed, run the code:</p>
-<p>dot –V</p>
+<div id="f6f244b8-a105-4ec9-a59a-facb924a31e9" class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dot –V</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Now, you have successfully installed Graphviz! Let’s move on to install Diagram library using pip command.</p>
 <p>Run the following code on the terminal:</p>
-<p>pip install diagrams</p>
+<div id="65736eea-b3ee-47f1-b648-5c9e1a10ac89" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pip install diagrams</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Collecting diagrams
+  Using cached diagrams-0.24.1-py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: graphviz&lt;0.21.0,&gt;=0.13.2 in c:\users\priya\appdata\local\programs\python\python310\lib\site-packages (from diagrams) (0.20.3)
+Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in c:\users\priya\appdata\roaming\python\python310\site-packages (from diagrams) (3.1.5)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\priya\appdata\roaming\python\python310\site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (3.0.2)
+Using cached diagrams-0.24.1-py3-none-any.whl (25.1 MB)
+Installing collected packages: diagrams
+Successfully installed diagrams-0.24.1
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
 <p>To upgrade to the latest version of this library run the code:</p>
-<p>pip install –upgrade diagrams</p>
+<div id="30a629e8-75f0-4c90-9872-8338619b9afe" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pip install <span class="op">--</span>upgrade diagrams</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Requirement already satisfied: diagrams in c:\users\priya\appdata\local\programs\python\python310\lib\site-packages (0.24.1)
+Requirement already satisfied: graphviz&lt;0.21.0,&gt;=0.13.2 in c:\users\priya\appdata\local\programs\python\python310\lib\site-packages (from diagrams) (0.20.3)
+Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in c:\users\priya\appdata\roaming\python\python310\site-packages (from diagrams) (3.1.5)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\priya\appdata\roaming\python\python310\site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (3.0.2)
+Note: you may need to restart the kernel to use updated packages.</code></pre>
+</div>
+</div>
 <p>To check if Diagrams is installed correctly, run the following code:</p>
-<p>from diagrams import Diagram<br>
-from diagrams.aws.compute import EC2</p>
-<p>with Diagram(“Simple Diagram”):<br>
-EC2(“my server”)</p>
-<p>Here Simple Diagram is the name of the diagram. If you run the above code with the command below,</p>
-<p>$ python diagram.py</p>
+<div id="f48e9278-c227-4310-aed5-560a3b8ad83e" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram  </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2  </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Simple Diagram"</span>):  </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    EC2(<span class="st">"my server"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here Simple Diagram is the name of the diagram.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/cf44d89b-9420-4caf-9b1c-04658c2f68fe-1-simple_diagram.png" class="img-fluid figure-img"></p>
+<figcaption>simple_diagram.png</figcaption>
+</figure>
+</div>
 <p>If Diagrams is installed successfully then this will generate an image file with single EC2 node drawn as simple_diagram.png in your working directory and open that created image file immediately.</p>
 <p><strong><em>Core Features</em></strong></p>
 <p>The diagrams library consists of four basic things:</p>
@@ -246,175 +336,370 @@ EC2(“my server”)</p>
 <p>Each Node belongs to a specific package within the Diagrams library. You can import them as needed. All these nodes can be assigned to variables as well.</p>
 <p><strong>Let’s understand how to use Nodes?</strong></p>
 <p>Nodes are imported from different provider categories, such as diagrams.aws.compute, diagrams.onprem.database, etc. A node object consists of three parts: provider, resource type and name. Here is a simple example:</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2</p>
-<p>with Diagram(“Simple Diagram”): EC2(“web”)</p>
+<div id="06809925-481f-448e-96c5-2c0cd061f817" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Simple Diagram"</span>):</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    EC2(<span class="st">"web"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/4240b1f9-1-simple_diagram-2.png" class="img-fluid figure-img"></p>
+<figcaption>simple_diagram-2.png</figcaption>
+</figure>
+</div>
 <p>In this example, EC2 is a node of resource type compute which is provided by the aws provider. Other node objects can also used in similar manner.</p>
-<p>from diagrams import Diagram from diagrams.aws.storage import S3 from diagrams.onprem.compute import Server from diagrams.aws.analytics import Redshift</p>
-<p>with Diagram(“My Design Diagram”) : DataService = Server(“Data Service”)</p>
-<pre><code>S3Storage = S3("S3 Bucket")
-
-MasterDB = Redshift("Redshift DW")</code></pre>
+<div id="21e1b98c-9f62-4ecc-9e6e-9b10b018253b" class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.storage <span class="im">import</span> S3</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.compute <span class="im">import</span> Server</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.analytics <span class="im">import</span> Redshift</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"My Design Diagram"</span>) :</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    DataService <span class="op">=</span> Server(<span class="st">"Data Service"</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    S3Storage <span class="op">=</span> S3(<span class="st">"S3 Bucket"</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    MasterDB <span class="op">=</span> Redshift(<span class="st">"Redshift DW"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>This code snippet will generate this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/76fa51a3-e969-46ea-abf8-2cf2fe4b1405-2-my_design_diagram.png" class="img-fluid figure-img"></p>
+<figcaption>my_design_diagram.png</figcaption>
+</figure>
+</div>
 <p>Other node objects can also used in similar manner.</p>
-<section id="aws-resources" class="level1">
-<h1>aws resources</h1>
-<p>from diagrams.aws.compute import ECS, Lambda from diagrams.aws.database import RDS, ElastiCache from diagrams.aws.network import ELB, Route53, VPC …</p>
-</section>
-<section id="azure-resources" class="level1">
-<h1>azure resources</h1>
-<p>from diagrams.azure.compute import FunctionApps from diagrams.azure.storage import BlobStorage …</p>
-</section>
-<section id="alibaba-cloud-resources" class="level1">
-<h1>alibaba cloud resources</h1>
-<p>from diagrams.alibabacloud.compute import ECS from diagrams.alibabacloud.storage import ObjectTableStore …</p>
-</section>
-<section id="gcp-resources" class="level1">
-<h1>gcp resources</h1>
-<p>from diagrams.gcp.compute import AppEngine, GKE from diagrams.gcp.ml import AutoML …</p>
-</section>
-<section id="k8s-resources" class="level1">
-<h1>k8s resources</h1>
-<p>from diagrams.k8s.compute import Pod, StatefulSet from diagrams.k8s.network import Service from diagrams.k8s.storage import PV, PVC, StorageClass …</p>
-</section>
-<section id="oracle-resources" class="level1">
-<h1>oracle resources</h1>
-<p>from diagrams.oci.compute import VirtualMachine, Container from diagrams.oci.network import Firewall from diagrams.oci.storage import FileStorage, StorageGateway</p>
+<div id="7c51c96a-2f1f-46ab-a505-0230939c702f" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># aws resources</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> ECS, Lambda</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS, ElastiCache</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> ELB, Route53, VPC</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># azure resources</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.azure.compute <span class="im">import</span> FunctionApps</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.azure.storage <span class="im">import</span> BlobStorage</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co"># alibaba cloud resources</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.alibabacloud.compute <span class="im">import</span> ECS</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.alibabacloud.storage <span class="im">import</span> ObjectTableStore</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="co"># gcp resources</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.gcp.compute <span class="im">import</span> AppEngine, GKE</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.gcp.ml <span class="im">import</span> AutoML</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="co"># k8s resources</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.k8s.compute <span class="im">import</span> Pod, StatefulSet</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.k8s.network <span class="im">import</span> Service</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.k8s.storage <span class="im">import</span> PV, PVC, StorageClass</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="co"># oracle resources</span></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.oci.compute <span class="im">import</span> VirtualMachine, Container</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.oci.network <span class="im">import</span> Firewall</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.oci.storage <span class="im">import</span> FileStorage, StorageGateway</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>****DataFlow****</p>
 <p>Data flow can be represented by connecting the nodes with the operators &gt;&gt;, &lt;&lt;, and -.</p>
 <p><strong>&gt;&gt;</strong> connects nodes in left to right direction.</p>
 <p><strong>&lt;&lt;</strong> connects nodes in right to left direction.</p>
 <p><strong>-</strong> connects nodes in no direction. Undirected.</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2 from diagrams.aws.database import RDS from diagrams.aws.network import ELB from diagrams.aws.storage import S3</p>
-<p>with Diagram(“Web Services”, show=False): ELB(“lb”) &gt;&gt; EC2(“web”) &gt;&gt; RDS(“userdb”) &gt;&gt; S3(“store”) ELB(“lb”) &gt;&gt; EC2(“web”) &gt;&gt; RDS(“userdb”) &lt;&lt; EC2(“stat”) (ELB(“lb”) &gt;&gt; EC2(“web”)) - EC2(“web”) &gt;&gt; RDS(“userdb”)</p>
+<div id="c07bf037-8737-4465-b740-1287a4e9b55f" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> ELB</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.storage <span class="im">import</span> S3</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Web Services"</span>, show<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    ELB(<span class="st">"lb"</span>) <span class="op">&gt;&gt;</span> EC2(<span class="st">"web"</span>) <span class="op">&gt;&gt;</span> RDS(<span class="st">"userdb"</span>) <span class="op">&gt;&gt;</span> S3(<span class="st">"store"</span>)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    ELB(<span class="st">"lb"</span>) <span class="op">&gt;&gt;</span> EC2(<span class="st">"web"</span>) <span class="op">&gt;&gt;</span> RDS(<span class="st">"userdb"</span>) <span class="op">&lt;&lt;</span> EC2(<span class="st">"stat"</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    (ELB(<span class="st">"lb"</span>) <span class="op">&gt;&gt;</span> EC2(<span class="st">"web"</span>)) <span class="op">-</span> EC2(<span class="st">"web"</span>) <span class="op">&gt;&gt;</span> RDS(<span class="st">"userdb"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/d499759e-973e-493a-9040-60eaa0cd2c71-2-web_services.png" class="img-fluid figure-img"></p>
+<figcaption>web_services.png</figcaption>
+</figure>
+</div>
 <p><strong>Note:</strong> Be careful when using ‘-’ and any shift operators together. It can cause unexpected results due to Python’s operator precedence, so you might have to use parentheses.</p>
 <p>The Data Flow direction can be changed with the direction parameter. The default is LR.</p>
 <p>Allowed values are: TB, BT, LR, and RL</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2 from diagrams.aws.database import RDS from diagrams.aws.network import ELB</p>
-<p>with Diagram(“Workers”, show=False, direction=“TB”): lb = ELB(“lb”) db = RDS(“events”) lb &gt;&gt; EC2(“worker1”) &gt;&gt; db lb &gt;&gt; EC2(“worker2”) &gt;&gt; db lb &gt;&gt; EC2(“worker3”) &gt;&gt; db lb &gt;&gt; EC2(“worker4”) &gt;&gt; db lb &gt;&gt; EC2(“worker5”) &gt;&gt; db</p>
+<div id="90bf3dc2-8cd7-4d98-898b-f6bba2d92a7d" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> ELB</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Workers"</span>, show<span class="op">=</span><span class="va">False</span>, direction<span class="op">=</span><span class="st">"TB"</span>):</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">=</span> ELB(<span class="st">"lb"</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> RDS(<span class="st">"events"</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">&gt;&gt;</span> EC2(<span class="st">"worker1"</span>) <span class="op">&gt;&gt;</span> db</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">&gt;&gt;</span> EC2(<span class="st">"worker2"</span>) <span class="op">&gt;&gt;</span> db</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">&gt;&gt;</span> EC2(<span class="st">"worker3"</span>) <span class="op">&gt;&gt;</span> db</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">&gt;&gt;</span> EC2(<span class="st">"worker4"</span>) <span class="op">&gt;&gt;</span> db</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">&gt;&gt;</span> EC2(<span class="st">"worker5"</span>) <span class="op">&gt;&gt;</span> db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/7cd10601-2213-4a8f-beb5-3159a1c93a65-1-workers.png" class="img-fluid figure-img"></p>
+<figcaption>workers.png</figcaption>
+</figure>
+</div>
 <p>****Group Data Flow****</p>
 <p>To avoid too many reduntant flows, you can group nodes into a list so that all nodes are connected to other nodes at once:</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2 from diagrams.aws.database import RDS from diagrams.aws.network import ELB</p>
-<p>with Diagram(“Grouped Workers”, show=False, direction=“TB”): ELB(“lb”) &gt;&gt; [EC2(“worker1”), EC2(“worker2”), EC2(“worker3”), EC2(“worker4”), EC2(“worker5”)] &gt;&gt; RDS(“events”)</p>
+<div id="fbfac22c-08ff-4886-b1a5-c3c446e7d598" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> ELB</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Grouped Workers"</span>, show<span class="op">=</span><span class="va">False</span>, direction<span class="op">=</span><span class="st">"TB"</span>):</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    ELB(<span class="st">"lb"</span>) <span class="op">&gt;&gt;</span> [EC2(<span class="st">"worker1"</span>),</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>                  EC2(<span class="st">"worker2"</span>),</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>                  EC2(<span class="st">"worker3"</span>),</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>                  EC2(<span class="st">"worker4"</span>),</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>                  EC2(<span class="st">"worker5"</span>)] <span class="op">&gt;&gt;</span> RDS(<span class="st">"events"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/6c209fc3-adcb-40ef-b0ab-28d709617fb7-1-grouped_workers.png" class="img-fluid figure-img"></p>
+<figcaption>grouped_workers.png</figcaption>
+</figure>
+</div>
 <p><strong>Note:</strong> You can’t connect two lists directly because shift/arithmetic operations between lists are not allowed in Python.</p>
 <p><strong>3. Cluster:</strong> A cluster is nothing but a set of nodes that we want together. A cluster is defined using the cluster context and any node defined under that context is grouped together. You can also give it a name to define your cluster group. You can also nest clusters under clusters.</p>
-<p>from diagrams import Cluster, Diagram from diagrams.aws.compute import ECS from diagrams.aws.database import RDS from diagrams.aws.network import Route53</p>
-<p>with Diagram(“Simple Web Service with DB Cluster”, show=False): dns = Route53(“dns”) web = ECS(“service”)</p>
-<pre><code>with Cluster("DB Cluster"):
-    db_primary = RDS("primary")
-    db_primary - [RDS("replica1"),
-                 RDS("replica2")]
-
-dns &gt;&gt; web &gt;&gt; db_primary</code></pre>
+<div id="1c21af9c-ee95-4df1-a69d-97bbe87bfcdd" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Cluster, Diagram</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> ECS</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> Route53</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Simple Web Service with DB Cluster"</span>, show<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    dns <span class="op">=</span> Route53(<span class="st">"dns"</span>)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    web <span class="op">=</span> ECS(<span class="st">"service"</span>)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Cluster(<span class="st">"DB Cluster"</span>):</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>        db_primary <span class="op">=</span> RDS(<span class="st">"primary"</span>)</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>        db_primary <span class="op">-</span> [RDS(<span class="st">"replica1"</span>),</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>                     RDS(<span class="st">"replica2"</span>)]</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    dns <span class="op">&gt;&gt;</span> web <span class="op">&gt;&gt;</span> db_primary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/0cd4e6ec-a4d8-4464-bb3d-488f8b038b23-1-simple_web_service_with_db_cluster.png" class="img-fluid figure-img"></p>
+<figcaption>simple_web_service_with_db_cluster.png</figcaption>
+</figure>
+</div>
 <p>****Nested Cluster:****</p>
-<p>from diagrams import Cluster, Diagram from diagrams.aws.compute import ECS, EKS, Lambda from diagrams.aws.database import Redshift from diagrams.aws.integration import SQS from diagrams.aws.storage import S3</p>
-<p>with Diagram(“Event Processing”, show=False): source = EKS(“k8s source”)</p>
-<pre><code>with Cluster("Event Flows"):
-    with Cluster("Event Workers"):
-        workers = [ECS("worker1"),
-                   ECS("worker2"),
-                   ECS("worker3")]
-
-    queue = SQS("event queue")
-
-    with Cluster("Processing"):
-        handlers = [Lambda("proc1"),
-                    Lambda("proc2"),
-                    Lambda("proc3")]
-
-store = S3("events store")
-dw = Redshift("analytics")
-
-source &gt;&gt; workers &gt;&gt; queue &gt;&gt; handlers
-handlers &gt;&gt; store
-handlers &gt;&gt; dw</code></pre>
+<div id="640ea23c-da7d-4461-8e58-d5e54edfc8f0" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Cluster, Diagram</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> ECS, EKS, Lambda</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> Redshift</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.integration <span class="im">import</span> SQS</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.storage <span class="im">import</span> S3</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Event Processing"</span>, show<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    source <span class="op">=</span> EKS(<span class="st">"k8s source"</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Cluster(<span class="st">"Event Flows"</span>):</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> Cluster(<span class="st">"Event Workers"</span>):</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>            workers <span class="op">=</span> [ECS(<span class="st">"worker1"</span>),</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>                       ECS(<span class="st">"worker2"</span>),</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>                       ECS(<span class="st">"worker3"</span>)]</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>        queue <span class="op">=</span> SQS(<span class="st">"event queue"</span>)</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> Cluster(<span class="st">"Processing"</span>):</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>            handlers <span class="op">=</span> [Lambda(<span class="st">"proc1"</span>),</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>                        Lambda(<span class="st">"proc2"</span>),</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>                        Lambda(<span class="st">"proc3"</span>)]</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>    store <span class="op">=</span> S3(<span class="st">"events store"</span>)</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>    dw <span class="op">=</span> Redshift(<span class="st">"analytics"</span>)</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>    source <span class="op">&gt;&gt;</span> workers <span class="op">&gt;&gt;</span> queue <span class="op">&gt;&gt;</span> handlers</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>    handlers <span class="op">&gt;&gt;</span> store</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>    handlers <span class="op">&gt;&gt;</span> dw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/6379e5a6-e9dc-44db-9ee3-da140b52d990-1-event_processing.png" class="img-fluid figure-img"></p>
+<figcaption>event_processing.png</figcaption>
+</figure>
+</div>
 <p><strong>4. Edge:</strong> Edge is an object representing a connection between nodes with some additional properties.You can set the colour, label, and style of your edge that connects your nodes. An edge object contains three attributes: label, color, and style. They mirror the corresponding Graphviz edge attributes.</p>
-<p>from diagrams import Diagram, Edge from diagrams.aws.storage import S3 from diagrams.onprem.compute import Server from diagrams.aws.analytics import Redshift</p>
-<p>with Diagram(“My Design Diagram”) : DataService = Server(“Data Service”)</p>
-<pre><code>S3Storage = S3("S3 Bucket")
-
-MasterDB = Redshift("Redshift DW")
-
-DataService &gt;&gt; Edge(label="Sending data to S3") &gt;&gt; S3Storage 
-S3Storage &gt;&gt; Edge(label="Copying data to Redshift") &gt;&gt; MasterDB</code></pre>
-<p>from diagrams import Cluster, Diagram, Edge from diagrams.onprem.analytics import Spark from diagrams.onprem.compute import Server from diagrams.onprem.database import PostgreSQL from diagrams.onprem.inmemory import Redis from diagrams.onprem.aggregator import Fluentd from diagrams.onprem.monitoring import Grafana, Prometheus from diagrams.onprem.network import Nginx from diagrams.onprem.queue import Kafka</p>
-<p>with Diagram(name=“Advanced Web Service with On-Premises (colored)”, show=False): ingress = Nginx(“ingress”)</p>
-<pre><code>metrics = Prometheus("metric")
-metrics &lt;&lt; Edge(color="firebrick", style="dashed") &lt;&lt; Grafana("monitoring")
-
-with Cluster("Service Cluster"):
-    grpcsvc = [
-        Server("grpc1"),
-        Server("grpc2"),
-        Server("grpc3")]
-
-with Cluster("Sessions HA"):
-    primary = Redis("session")
-    primary \
-        - Edge(color="brown", style="dashed") \
-        - Redis("replica") \
-        &lt;&lt; Edge(label="collect") \
-        &lt;&lt; metrics
-    grpcsvc &gt;&gt; Edge(color="brown") &gt;&gt; primary
-
-with Cluster("Database HA"):
-    primary = PostgreSQL("users")
-    primary \
-        - Edge(color="brown", style="dotted") \
-        - PostgreSQL("replica") \
-        &lt;&lt; Edge(label="collect") \
-        &lt;&lt; metrics
-    grpcsvc &gt;&gt; Edge(color="black") &gt;&gt; primary
-
-aggregator = Fluentd("logging")
-aggregator \
-    &gt;&gt; Edge(label="parse") \
-    &gt;&gt; Kafka("stream") \
-    &gt;&gt; Edge(color="black", style="bold") \
-    &gt;&gt; Spark("analytics")
-
-ingress \
-    &gt;&gt; Edge(color="darkgreen") \
-    &lt;&lt; grpcsvc \
-    &gt;&gt; Edge(color="darkorange") \
-    &gt;&gt; aggregator</code></pre>
+<div id="f1d74352-5f26-43d3-a459-9584ca429b32" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram, Edge</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.storage <span class="im">import</span> S3</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.compute <span class="im">import</span> Server</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.analytics <span class="im">import</span> Redshift</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"My Design Diagram"</span>) :</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    DataService <span class="op">=</span> Server(<span class="st">"Data Service"</span>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    S3Storage <span class="op">=</span> S3(<span class="st">"S3 Bucket"</span>)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    MasterDB <span class="op">=</span> Redshift(<span class="st">"Redshift DW"</span>)</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    DataService <span class="op">&gt;&gt;</span> Edge(label<span class="op">=</span><span class="st">"Sending data to S3"</span>) <span class="op">&gt;&gt;</span> S3Storage </span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    S3Storage <span class="op">&gt;&gt;</span> Edge(label<span class="op">=</span><span class="st">"Copying data to Redshift"</span>) <span class="op">&gt;&gt;</span> MasterDB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/42244411-e443-42e2-a0c0-7fcd463cb022-1-my_design_diagram.png" class="img-fluid figure-img"></p>
+<figcaption>my_design_diagram.png</figcaption>
+</figure>
+</div>
+<div id="fba2e937-2bed-4ba3-8d46-78ebf6850277" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Cluster, Diagram, Edge</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.analytics <span class="im">import</span> Spark</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.compute <span class="im">import</span> Server</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.database <span class="im">import</span> PostgreSQL</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.inmemory <span class="im">import</span> Redis</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.aggregator <span class="im">import</span> Fluentd</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.monitoring <span class="im">import</span> Grafana, Prometheus</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.network <span class="im">import</span> Nginx</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.queue <span class="im">import</span> Kafka</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(name<span class="op">=</span><span class="st">"Advanced Web Service with On-Premises (colored)"</span>, show<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    ingress <span class="op">=</span> Nginx(<span class="st">"ingress"</span>)</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    metrics <span class="op">=</span> Prometheus(<span class="st">"metric"</span>)</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    metrics <span class="op">&lt;&lt;</span> Edge(color<span class="op">=</span><span class="st">"firebrick"</span>, style<span class="op">=</span><span class="st">"dashed"</span>) <span class="op">&lt;&lt;</span> Grafana(<span class="st">"monitoring"</span>)</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Cluster(<span class="st">"Service Cluster"</span>):</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>        grpcsvc <span class="op">=</span> [</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>            Server(<span class="st">"grpc1"</span>),</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>            Server(<span class="st">"grpc2"</span>),</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>            Server(<span class="st">"grpc3"</span>)]</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Cluster(<span class="st">"Sessions HA"</span>):</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>        primary <span class="op">=</span> Redis(<span class="st">"session"</span>)</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>        primary <span class="op">\</span></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>            <span class="op">-</span> Edge(color<span class="op">=</span><span class="st">"brown"</span>, style<span class="op">=</span><span class="st">"dashed"</span>) <span class="op">\</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>            <span class="op">-</span> Redis(<span class="st">"replica"</span>) <span class="op">\</span></span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;&lt;</span> Edge(label<span class="op">=</span><span class="st">"collect"</span>) <span class="op">\</span></span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;&lt;</span> metrics</span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>        grpcsvc <span class="op">&gt;&gt;</span> Edge(color<span class="op">=</span><span class="st">"brown"</span>) <span class="op">&gt;&gt;</span> primary</span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Cluster(<span class="st">"Database HA"</span>):</span>
+<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a>        primary <span class="op">=</span> PostgreSQL(<span class="st">"users"</span>)</span>
+<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a>        primary <span class="op">\</span></span>
+<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a>            <span class="op">-</span> Edge(color<span class="op">=</span><span class="st">"brown"</span>, style<span class="op">=</span><span class="st">"dotted"</span>) <span class="op">\</span></span>
+<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a>            <span class="op">-</span> PostgreSQL(<span class="st">"replica"</span>) <span class="op">\</span></span>
+<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;&lt;</span> Edge(label<span class="op">=</span><span class="st">"collect"</span>) <span class="op">\</span></span>
+<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;&lt;</span> metrics</span>
+<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a>        grpcsvc <span class="op">&gt;&gt;</span> Edge(color<span class="op">=</span><span class="st">"black"</span>) <span class="op">&gt;&gt;</span> primary</span>
+<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a>    aggregator <span class="op">=</span> Fluentd(<span class="st">"logging"</span>)</span>
+<span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a>    aggregator <span class="op">\</span></span>
+<span id="cb24-43"><a href="#cb24-43" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;&gt;</span> Edge(label<span class="op">=</span><span class="st">"parse"</span>) <span class="op">\</span></span>
+<span id="cb24-44"><a href="#cb24-44" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;&gt;</span> Kafka(<span class="st">"stream"</span>) <span class="op">\</span></span>
+<span id="cb24-45"><a href="#cb24-45" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;&gt;</span> Edge(color<span class="op">=</span><span class="st">"black"</span>, style<span class="op">=</span><span class="st">"bold"</span>) <span class="op">\</span></span>
+<span id="cb24-46"><a href="#cb24-46" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;&gt;</span> Spark(<span class="st">"analytics"</span>)</span>
+<span id="cb24-47"><a href="#cb24-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-48"><a href="#cb24-48" aria-hidden="true" tabindex="-1"></a>    ingress <span class="op">\</span></span>
+<span id="cb24-49"><a href="#cb24-49" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;&gt;</span> Edge(color<span class="op">=</span><span class="st">"darkgreen"</span>) <span class="op">\</span></span>
+<span id="cb24-50"><a href="#cb24-50" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;&lt;</span> grpcsvc <span class="op">\</span></span>
+<span id="cb24-51"><a href="#cb24-51" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;&gt;</span> Edge(color<span class="op">=</span><span class="st">"darkorange"</span>) <span class="op">\</span></span>
+<span id="cb24-52"><a href="#cb24-52" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;&gt;</span> aggregator</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/aa83000e-71b1-453c-b7ee-1621a1adfb86-1-advanced_web_service_with_on-premises_(colored).png" class="img-fluid figure-img"></p>
+<figcaption>advanced_web_service_with_on-premises_(colored).png</figcaption>
+</figure>
+</div>
 <p>Now, let’s move forward to understand the relationships between Nodes.</p>
 <p><strong>Directed Relationship:</strong> This means a node is pointing towards the next one. Without using edge, you can just use the “&gt;&gt;” operator for this and an arrow will be created between your nodes.</p>
 <p><strong>Synergic Relationship:</strong> This is to define nodes that work together as a single unit. You can define this by using the “-” operator between nodes.</p>
-<p>from diagrams import Diagram, Edge, Cluster from diagrams.aws.storage import S3 from diagrams.onprem.compute import Server from diagrams.aws.analytics import Redshift from diagrams.aws.compute import LambdaFunction as Lambda</p>
-<p>with Diagram(“My Design Diagram”) : DataService = Server(“Data Service”)</p>
-<pre><code>with Cluster('S3 Buckets') :
-    S3Storage = [S3(f"S3 Bucket_{n}") for n in range(1,4)]
-
-with Cluster('Lambda Process'):
-    Lambdas = [Lambda(f"LambdaFunction_{n}") for n in range(1,4)]
-
-    for n in range(0,2):
-        Lambdas[n] - Lambdas[n+1]
-
-
-
-MasterDB = Redshift("Redshift DW")
-
-DataService &gt;&gt; Edge(label="Sending data to S3") &gt;&gt; S3Storage
-S3Storage &gt;&gt; Edge(label="Copying data to Redshift") &gt;&gt; MasterDB
-MasterDB &gt;&gt; Lambdas</code></pre>
+<div id="fb277854-e75d-4604-87f4-70b9e779ed14" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram, Edge, Cluster</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.storage <span class="im">import</span> S3</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.compute <span class="im">import</span> Server</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.analytics <span class="im">import</span> Redshift</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> LambdaFunction <span class="im">as</span> Lambda</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"My Design Diagram"</span>) :</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    DataService <span class="op">=</span> Server(<span class="st">"Data Service"</span>)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Cluster(<span class="st">'S3 Buckets'</span>) :</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>        S3Storage <span class="op">=</span> [S3(<span class="ss">f"S3 Bucket_</span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">"</span>) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>)]</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Cluster(<span class="st">'Lambda Process'</span>):</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>        Lambdas <span class="op">=</span> [Lambda(<span class="ss">f"LambdaFunction_</span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">"</span>) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>)]</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">2</span>):</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>            Lambdas[n] <span class="op">-</span> Lambdas[n<span class="op">+</span><span class="dv">1</span>]</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    MasterDB <span class="op">=</span> Redshift(<span class="st">"Redshift DW"</span>)</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>    DataService <span class="op">&gt;&gt;</span> Edge(label<span class="op">=</span><span class="st">"Sending data to S3"</span>) <span class="op">&gt;&gt;</span> S3Storage</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>    S3Storage <span class="op">&gt;&gt;</span> Edge(label<span class="op">=</span><span class="st">"Copying data to Redshift"</span>) <span class="op">&gt;&gt;</span> MasterDB</span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>    MasterDB <span class="op">&gt;&gt;</span> Lambdas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/d0488473-9126-49e9-913e-b5d6d18ecaeb-1-my_design_diagram.png" class="img-fluid figure-img"></p>
+<figcaption>my_design_diagram.png</figcaption>
+</figure>
+</div>
 <p>Here we have defined the relationship between the lambda function using the ‘-’ operator and so they are now in synergic relationshi and work together inside the cluster. It can be seen from here that how the Redshift DW directed to the Lambda functions without any text defining a directed relationship by just using the ‘&gt;&gt;’ operator without any Edge.</p>
 <p><strong><em>Advanced Features &amp; Customizations</em></strong></p>
 <p>Now that you’ve covered the basics (Diagram, Nodes, Edges, Clusters, and Relationships), let’s introduce more customization options. One of the standout features of the Diagrams library is its simple and intuitive Python syntax.Diagrams allows users to define infrastructure, system architecture, and cloud diagrams using concise Python code. These are the key features of the Diagram library:</p>
 <p><strong>1. Customizing Node Styles:</strong> Diagrams allow you to customize node styles, including color, shape, and icons, to enhance clarity and visual appeal.</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2 from diagrams.aws.database import RDS from diagrams.aws.network import ELB</p>
-<p>with Diagram(“Custom Styled Nodes”, show=True, direction=“TB”): lb = ELB(“Load Balancer”) # Default AWS icon web = EC2(“Web Server”) # EC2 icon db = RDS(“Database”) # Database icon</p>
-<pre><code>lb - [web] - db  # Defining connections</code></pre>
+<div id="eafd5102-6e07-4aa9-b243-aa8886272892" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> ELB</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Custom Styled Nodes"</span>, show<span class="op">=</span><span class="va">True</span>, direction<span class="op">=</span><span class="st">"TB"</span>):</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">=</span> ELB(<span class="st">"Load Balancer"</span>)  <span class="co"># Default AWS icon</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    web <span class="op">=</span> EC2(<span class="st">"Web Server"</span>)  <span class="co"># EC2 icon</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> RDS(<span class="st">"Database"</span>)  <span class="co"># Database icon</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">-</span> [web] <span class="op">-</span> db  <span class="co"># Defining connections</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/40250337-5701-4455-8ee0-0164e697b3a6-1-custom_styled_nodes.png" class="img-fluid figure-img"></p>
+<figcaption>custom_styled_nodes.png</figcaption>
+</figure>
+</div>
 <p><strong>2. Using Subgraphs for Better Organization:</strong> Subgraphs (Clusters) help group related components in a diagram, making it easier to understand complex systems.</p>
-<p>from diagrams import Diagram, Cluster from diagrams.aws.compute import EC2 from diagrams.aws.database import RDS from diagrams.aws.network import ELB</p>
-<p>with Diagram(“Grouped Architecture”, show=True, direction=“TB”): lb = ELB(“Load Balancer”)</p>
-<pre><code>with Cluster("Application Servers"):
-    web1 = EC2("Web Server 1")
-    web2 = EC2("Web Server 2")
-
-db = RDS("Database")
-
-lb - [web1, web2] - db  # Connecting nodes</code></pre>
+<div id="36fbf05e-f0df-45a7-8590-8a31ed67c1e8" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram, Cluster</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> ELB</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Grouped Architecture"</span>, show<span class="op">=</span><span class="va">True</span>, direction<span class="op">=</span><span class="st">"TB"</span>):</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">=</span> ELB(<span class="st">"Load Balancer"</span>)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Cluster(<span class="st">"Application Servers"</span>):</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>        web1 <span class="op">=</span> EC2(<span class="st">"Web Server 1"</span>)</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>        web2 <span class="op">=</span> EC2(<span class="st">"Web Server 2"</span>)</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> RDS(<span class="st">"Database"</span>)</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">-</span> [web1, web2] <span class="op">-</span> db  <span class="co"># Connecting nodes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/cf25960d-9bae-4eaf-96e5-9f60367df784-1-grouped_architecture.png" class="img-fluid figure-img"></p>
+<figcaption>grouped_architecture.png</figcaption>
+</figure>
+</div>
 <p><strong>3. Arranging Layouts:</strong> By default, Diagrams arranges components top to bottom (TB), but you can customize it using direction attributes:</p>
 <ul>
 <li><p>TB (Top to Bottom)</p></li>
@@ -423,22 +708,83 @@ lb - [web1, web2] - db  # Connecting nodes</code></pre>
 <li><p>RL (Right to Left)</p></li>
 </ul>
 <p>Example : Left-to-Right (LR) Layout</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2 from diagrams.aws.database import RDS from diagrams.aws.network import ELB</p>
-<p>with Diagram(“Left to Right Layout”, direction=“LR”, show=True): lb = ELB(“Load Balancer”) web = EC2(“Web Server”) db = RDS(“Database”)</p>
-<pre><code>lb &gt;&gt; web &gt;&gt; db  # Flow from left to right</code></pre>
+<div id="88f178ac-e604-4ec9-8cc5-01f7e60d4783" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> ELB</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Left to Right Layout"</span>, direction<span class="op">=</span><span class="st">"LR"</span>, show<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">=</span> ELB(<span class="st">"Load Balancer"</span>)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    web <span class="op">=</span> EC2(<span class="st">"Web Server"</span>)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> RDS(<span class="st">"Database"</span>)</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">&gt;&gt;</span> web <span class="op">&gt;&gt;</span> db  <span class="co"># Flow from left to right</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/aee32467-5cd1-4693-9583-10b01d3614ca-1-left_to_right_layout.png" class="img-fluid figure-img"></p>
+<figcaption>left_to_right_layout.png</figcaption>
+</figure>
+</div>
 <p><strong>4. Adding Custom Icons and Images:</strong> By default, Diagrams uses built-in icons, but you can use custom images for non-supported components.</p>
-<p>from diagrams import Diagram from diagrams.custom import Custom</p>
-<p>with Diagram(“Custom Icon Example”, show=True): my_service = Custom(“My Service”, “./my_icon.png”)</p>
+<div id="ecdfc3cf-9ae7-4c7e-a129-9104e0d6a7a7" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.custom <span class="im">import</span> Custom</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Custom Icon Example"</span>, show<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    my_service <span class="op">=</span> Custom(<span class="st">"My Service"</span>, <span class="st">"./my_icon.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/544aa322-9a9f-44a6-9bba-dd87d71c8faa-1-custom_icon_example.png" class="img-fluid figure-img"></p>
+<figcaption>custom_icon_example.png</figcaption>
+</figure>
+</div>
 <p><strong>5. Defining Complex Relationships (Bidirectional &amp; Conditional Arrows):</strong> This helps represent data flow, feedback loops, and interdependencies.</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2 from diagrams.aws.database import RDS from diagrams.aws.network import ELB</p>
-<p>with Diagram(“Complex Relationships”, show=True): lb = ELB(“Load Balancer”) web = EC2(“Web Server”) db = RDS(“Database”)</p>
-<pre><code>lb &gt;&gt; web  # One-way connection
-web &gt;&gt; db  # One-way connection
-db &lt;&lt; web  # Bidirectional connection (data flow)</code></pre>
+<div id="f94602a4-e40b-4461-81aa-49074e9e5a6c" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.database <span class="im">import</span> RDS</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.network <span class="im">import</span> ELB</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Complex Relationships"</span>, show<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">=</span> ELB(<span class="st">"Load Balancer"</span>)</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    web <span class="op">=</span> EC2(<span class="st">"Web Server"</span>)</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    db <span class="op">=</span> RDS(<span class="st">"Database"</span>)</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">&gt;&gt;</span> web  <span class="co"># One-way connection</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    web <span class="op">&gt;&gt;</span> db  <span class="co"># One-way connection</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>    db <span class="op">&lt;&lt;</span> web  <span class="co"># Bidirectional connection (data flow)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/fab70b69-6f0d-477b-8787-11045c4be639-1-complex_relationships.png" class="img-fluid figure-img"></p>
+<figcaption>complex_relationships.png</figcaption>
+</figure>
+</div>
 <p><strong>6. Using Different Providers (AWS, GCP, Azure, On-Premises):</strong> Diagrams supports multiple cloud providers and on-premises infrastructure.</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2 from diagrams.azure.compute import FunctionApp from diagrams.gcp.compute import GCE from diagrams.onprem.database import PostgreSQL</p>
-<p>with Diagram(“Multi-Cloud Setup”, show=True): aws_vm = EC2(“AWS EC2”) azure_func = FunctionApp(“Azure Function”) gcp_vm = GCE(“GCP Compute Engine”) onprem_db = PostgreSQL(“On-Prem Database”)</p>
-<pre><code>aws_vm &gt;&gt; azure_func &gt;&gt; gcp_vm &gt;&gt; onprem_db</code></pre>
+<div id="7fe92dc8-8355-435a-a52f-fab303540066" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.azure.compute <span class="im">import</span> AppServices</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.gcp.compute <span class="im">import</span> GCE</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.onprem.database <span class="im">import</span> PostgreSQL</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Multi-Cloud Setup"</span>, show<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    aws_vm <span class="op">=</span> EC2(<span class="st">"AWS EC2"</span>)</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    azure_func <span class="op">=</span> AppServices(<span class="st">"Azure App Service"</span>)</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    gcp_vm <span class="op">=</span> GCE(<span class="st">"GCP Compute Engine"</span>)</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    onprem_db <span class="op">=</span> PostgreSQL(<span class="st">"On-Prem Database"</span>)</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    aws_vm <span class="op">&gt;&gt;</span> azure_func <span class="op">&gt;&gt;</span> gcp_vm <span class="op">&gt;&gt;</span> onprem_db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PSDV Assignment Blog_files/figure-html/e8bb5d20-7f9c-4cc7-91eb-ccc363cc4bad-1-multi-cloud_setup.png" class="img-fluid figure-img"></p>
+<figcaption>multi-cloud_setup.png</figcaption>
+</figure>
+</div>
 <p><strong>7. Prebuilt Cloud and On-Prem Components :</strong> The Diagrams library provides prebuilt cloud and on-prem components that allow users to easily create infrastructure diagrams without designing custom icons or shapes. These components represent various cloud services, networking elements, storage, databases, and security tools from providers like AWS,Azure, Google Cloud, and on-prem architectures.</p>
 <table class="caption-top table">
 <colgroup>
@@ -471,7 +817,13 @@ db &lt;&lt; web  # Bidirectional connection (data flow)</code></pre>
 </tbody>
 </table>
 <p><strong>8. Exporting and Saving Diagrams:</strong> Once you create a diagram using the Diagrams(mingrammer/diagrams) library, you may need to export, save, or share it in different formats. The library automatically generates an image file when the diagram script runs, but you can customize the output file format,location, and visualization options. Example: Save as SVG</p>
-<p>from diagrams import Diagram from diagrams.aws.compute import EC2 with Diagram("Custom_Diagram", filename="my_diagram", outformat="svg"): EC2("Web Server")</p>
+<div id="f98939f5-97f3-4bb2-a771-487aa1715504" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams <span class="im">import</span> Diagram</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> diagrams.aws.compute <span class="im">import</span> EC2</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Diagram(<span class="st">"Custom_Diagram"</span>, filename<span class="op">=</span><span class="st">"my_diagram"</span>, outformat<span class="op">=</span><span class="st">"svg"</span>):</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    EC2(<span class="st">"Web Server"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p><strong>Summary of Advanced Features</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -569,7 +921,6 @@ db &lt;&lt; web  # Bidirectional connection (data flow)</code></pre>
 </ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -592,6 +943,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
